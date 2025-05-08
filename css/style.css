@@ -1,0 +1,100 @@
+/*Global reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default fonts and colors */
+body {
+    font-family: 'Poppins', Verdana, sans-serif;
+    color: whitesmoke;
+    background-color: #ffffff;
+  }
+
+/* ============================
+   Global Link and Button Styles
+   ============================ */
+li, a, button {
+    font-family: 'Poppins', Verdana, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header a {
+    color: #ffffff;
+}
+
+/*Header Section (Navigation Bar)*/
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #121212;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 20px;
+    cursor: pointer;
+    color: #00BFFF;
+}
+
+/*Navigation Links*/
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav_links li {
+    display: inline-block;
+}
+
+.nav_links li a {
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav_links li a:hover {
+    font-size: 17px;
+    color: #00BFFF;
+    border-bottom: 2px solid #00BFFF;
+}
+
+/* Active Link Style - Current Page */
+.nav_links li a.active {
+    background-color: #00BFFF;
+    color: #121212;
+    padding: 6px 16px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 25px;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+/*Header Button Styles*/
+header button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #00BFFF;
+    color: #121212;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+header button:hover {
+    color: #ffffff;
+    background-color: #005f88;
+    transform: scale(1.05);
+}
+
+
