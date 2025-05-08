@@ -30,6 +30,7 @@ header h1 {
     margin-right: auto;
     padding: 0;
     cursor: pointer;
+    text-transform: uppercase;
     font-family: 'Antonio', verdana, sans-serif;
     font-size: 25px;
     color: rgb(0, 238, 255);
