@@ -30,6 +30,7 @@ header a {
 
 /*Header Section (Navigation Bar)*/
 header {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -98,20 +99,61 @@ header button:hover {
     background-color: #005f88;
     transform: scale(1.05);
 }
-
 /*END OF HEADER SECTION*/
+
+/*FOOTER*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #121212;
+}
+footer a {
+    font-weight: bold;
+    font-size: 14px;
+    color: whitesmoke;
+}
+/*END OF FOOTER*/
 
 /*HOMEPAGE SECTION*/
 
-/*You can write the codes here, inside of this section*/
+/*Section*/
+.hero-section {
+    background-image: url(/img/banner.png);
+    background-size: cover;
+    background-position: 50% right;
+    background-repeat: no-repeat;
+    padding: 30px;
+    top: 500px;
+    width: 100%;
+    height: auto;
+}
+.hero-section div{
+    left: auto;
+    padding: 20px;
+    width: 30%;
+    text-align: right;
+}
+
+
+
 
 /*END OF HOMEPAGE SECTION*/
+
+
 
 /*DETAILS SECTION*/
 
 /*You can write the codes here, inside of this section*/
 
 /*END OF DETAILS SECTION*/
+
+
 
 /*CONTACT SECTION*/
 
