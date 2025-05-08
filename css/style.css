@@ -29,7 +29,7 @@ header {
 header h1 {
     margin-right: auto;
     padding: 0;
-    cursor: pointer;
+    cursor: default;
     text-transform: uppercase;
     font-family: 'Antonio', verdana, sans-serif;
     font-size: 25px;
