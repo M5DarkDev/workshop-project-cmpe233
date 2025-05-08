@@ -8,7 +8,7 @@
 /* Default fonts and colors */
 body {
     font-family: 'Poppins', Verdana, sans-serif;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     background-color: #ffffff;
   }
 
@@ -30,6 +30,7 @@ header a {
 
 /*Header Section (Navigation Bar)*/
 header {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -128,7 +129,7 @@ footer a {
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-    padding: 130px 30px 30px;
+    padding: 130px 100px 100px;
     width: 100%;
     min-height: 400px;
     display: flex;
@@ -140,13 +141,15 @@ footer a {
 .hero-section div {
     padding: 30px;
     width: 45%;
-    text-align: right;
+    
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.034);
-    color: #fff;
     font-size: 30px;
     font-family: sans-serif;
+    text-align: right;
     line-height: 1.6;
+    background: rgba(255, 255, 255, 0.034);
+    color: #fff;
+    
 }
 
 .hero-section div h1 {
@@ -160,7 +163,34 @@ footer a {
     font-size: 16px;
 }
 
-
+/*highlights card*/
+.highlights {
+    padding: 20px;
+}
+.highlights h1{
+    font-size: 70px;
+    color: #02b3ff;
+    text-align: center;
+}
+.highlights .card{
+    width: 300px;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #12121257;
+    background-color: #eeeeee;
+}
+.highlights .text{
+    float: left;
+}
+.highlights img {
+    width: 250px;
+}
+.highlights .img {
+    float: left;
+}
+  
 
 
 
@@ -185,3 +215,15 @@ footer a {
 /*END OF CONTACT SECTION*/
 
 
+@media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .hero-section > div {
+      width: 100%;
+    }
+  }
+  
