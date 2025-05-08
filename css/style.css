@@ -22,6 +22,8 @@ li, a, button {
     font-size: 16px;
 }
 
+/*HEADER SECTION*/
+
 header a {
     color: #ffffff;
 }
@@ -96,5 +98,25 @@ header button:hover {
     background-color: #005f88;
     transform: scale(1.05);
 }
+
+/*END OF HEADER SECTION*/
+
+/*HOMEPAGE SECTION*/
+
+/*You can write the codes here, inside of this section*/
+
+/*END OF HOMEPAGE SECTION*/
+
+/*DETAILS SECTION*/
+
+/*You can write the codes here, inside of this section*/
+
+/*END OF DETAILS SECTION*/
+
+/*CONTACT SECTION*/
+
+/*You can write the codes here, inside of this section*/
+
+/*END OF CONTACT SECTION*/
 
 
