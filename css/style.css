@@ -1,229 +1,125 @@
 /*Global reset*/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', verdana, sans-serif;
+    color: whitesmoke;
+    background-color: black;
 }
 
-/* Default fonts and colors */
-body {
-    font-family: 'Poppins', Verdana, sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-  }
-
-/* ============================
-   Global Link and Button Styles
-   ============================ */
+/*links, lists and button reset*/
 li, a, button {
-    font-family: 'Poppins', Verdana, sans-serif;
-    text-decoration: none;
-    font-weight: 500;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 500px;
     font-size: 16px;
+    color: white;
+    text-decoration: none;
 }
 
-/*HEADER SECTION*/
-
-header a {
-    color: #ffffff;
-}
-
-/*Header Section (Navigation Bar)*/
+/*header section*/
 header {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 10%;
-    background-color: #121212;
+    padding: 30px 10%;
 }
 
-.logo {
+/*header logo*/
+header h1 {
     margin-right: auto;
-    font-size: 20px;
+    padding: 0;
     cursor: pointer;
-    color: #00BFFF;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-size: 25px;
+    color: rgb(0, 238, 255);
 }
 
-/*Navigation Links*/
+/*Navegation Bar*/
 .nav_links {
     list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
 }
 
 .nav_links li {
     display: inline-block;
+    padding: 0px 20px;
 }
 
 .nav_links li a {
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease 0s;
 }
 
 .nav_links li a:hover {
-    font-size: 17px;
-    color: #00BFFF;
-    border-bottom: 2px solid #00BFFF;
+    color:rgb(0, 238, 255);
 }
 
-/* Active Link Style - Current Page */
-.nav_links li a.active {
-    background-color: #00BFFF;
-    color: #121212;
-    padding: 2px 10px;
-    font-size: 17px;
-    font-weight: 600;
-    border-radius: 25px;
-    pointer-events: none; /*Disable the click option*/
-    box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
-}
-
-/*Header Button Styles*/
-header button {
+/*contact button*/
+.contact {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: #00BFFF;
-    color: #121212;
     border: none;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    color: black;
+    background-color: rgb(0, 238, 255);
+    transition: all 0.3s ease 0s;
 }
 
-header button:hover {
-    color: #ffffff;
-    background-color: #005f88;
-    transform: scale(1.05);
-}
-/*END OF HEADER SECTION*/
-
-/*FOOTER*/
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    font-size: 12px;
-    text-align: center;
+.contact:hover {
     color: whitesmoke;
-    background-color: #121212;
+    background-color: rgba(0, 238, 255, 0.466);
 }
-footer a {
-    font-weight: bold;
-    font-size: 14px;
-    color: whitesmoke;
-}
-/*END OF FOOTER*/
 
-/*HOMEPAGE SECTION*/
+/*Activate link on navegation bar*/
+.active {
+    margin-left: 20px;
+    padding: 4px 20px;
+    border: none;
+    border-radius: 50px;
+    pointer-events: none; /*no click*/
+    color: black;
+    background-color: rgb(0, 238, 255);
+    transition: all 0.3s ease 0s;
+} 
 
-/*Section*/
+/*Hero section*/
 .hero-section {
-    background-image: url(/img/banner.png);
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-    padding: 130px 100px 100px;
     width: 100%;
-    min-height: 400px;
+    height: 100vh;
+    background-image: url(/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 100px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.hero-section div {
-    padding: 30px;
-    width: 45%;
-    
-    border-radius: 20px;
-    font-size: 30px;
-    font-family: sans-serif;
-    text-align: right;
-    line-height: 1.6;
-    background: rgba(255, 255, 255, 0.034);
-    color: #fff;
-    
+/*Text section*/
+.hero-section h1 {
+    font-size: 45px;
+    width: 420px;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-weight: 400px;
+    background-color: rgba(240, 248, 255, 0);
 }
 
-.hero-section div h1 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    font-weight: bold;
+.hero-section p {
+    width: 430px;
+    padding: 30px 0px;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.hero-section b {
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.hero-section div p {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-/*highlights card*/
-.highlights {
+.hero-content {
     padding: 20px;
-}
-.highlights h1{
-    font-size: 70px;
-    color: #02b3ff;
+    margin-left: auto;
     text-align: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.048);
 }
-.highlights .card{
-    width: 300px;
-    height: auto;
-    margin: auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 8px #12121257;
-    background-color: #eeeeee;
-}
-.highlights .text{
-    float: left;
-}
-.highlights img {
-    width: 250px;
-}
-.highlights .img {
-    float: left;
-}
-  
-
-
-
-
-
-/*END OF HOMEPAGE SECTION*/
-
-
-
-/*DETAILS SECTION*/
-
-/*You can write the codes here, inside of this section*/
-
-/*END OF DETAILS SECTION*/
-
-
-
-/*CONTACT SECTION*/
-
-/*You can write the codes here, inside of this section*/
-
-/*END OF CONTACT SECTION*/
-
-
-@media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
-      padding: 40px 20px;
-      text-align: center;
-    }
-  
-    .hero-section > div {
-      width: 100%;
-    }
-  }
-  
