@@ -242,33 +242,6 @@ header h1 {
     cursor: pointer;
 }
 
-/*Gallery Section*/
-
-.gallery {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.gallery img {
-    width: 130px;
-    height: 125px;
-    border: 1px solid rgba(0, 238, 255, 0.26);
-    border-radius: 8px;
-    box-shadow: 4px 7px 7px 0px rgba(255, 255, 255, 0.13);
-    cursor: pointer;
-    margin: 10px;
-    transition: 400ms;
-    filter: sepia(1) saturate(1.9) hue-rotate(150deg);
-}
-.gallery img:hover {
-    filter: saturate(1.15);
-    width: 390px;
-    height: 260px;
-}
-
 /*specific cards*/
 #card2 p{
     margin-top: 20px;
