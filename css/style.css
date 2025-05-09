@@ -37,21 +37,18 @@ header h1 {
 }
 
 /*Navegation Bar*/
-.nav_links {
-    list-style: none;
-}
+.nav_links { list-style: none; }
 
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
+.nav_links li a { transition: all 0.3s ease 0s; }
 
-.nav_links li a:hover {
+.nav_links li a:hover { 
     color:rgb(0, 238, 255);
+    border-bottom: 2px solid rgb(0, 238, 255); 
 }
 
 /*contact button*/
@@ -114,7 +111,6 @@ header h1 {
     width: 420px;
     font-family: 'Antonio', verdana, sans-serif;
     font-weight: 400px;
-    background-color: rgba(240, 248, 255, 0);
 }
 
 .hero-section p {
@@ -123,15 +119,9 @@ header h1 {
     font-family: 'Poppins', verdana, sans-serif;
     font-weight: 400;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0);
-}
-.hero-section b {
-    background-color: rgba(255, 255, 255, 0);
 }
 
-.hero-section a {
-    background-color: rgba(255, 255, 255, 0);;
-}
+.hero-section h1, p, b, a { background-color: rgba(255, 255, 255, 0); }
 
 .hero-content {
     padding: 20px;
@@ -190,35 +180,16 @@ header h1 {
 }
 
 /*specific cards*/
-#card2 p{
-    margin-top: 20px;
-}
-#card2 button{
-    margin-top: 40px;
-}
-#card3 p{
-    margin-top: 20px;
-}
-#card3 button{
-    margin-top: 40px;
-}
-#card4 p{
-    margin-top: 20px;
-}
-#card4 button{
-    margin-top: 40px;
-}
-#card5 p{
-    margin-top: 20px;
-}
-#card5 button{
-    margin-top: 40px;
-}
+#card2 p { margin-top: 20px; }
+#card2 button { margin-top: 40px; }
+#card3 p { margin-top: 20px; }
+#card3 button { margin-top: 40px;}
+#card4 p { margin-top: 20px;}
+#card4 button { margin-top: 40px;}
+#card5 p { margin-top: 20px; }
+#card5 button { margin-top: 40px; }
 
-
-.card-content {
-    padding: 20px;
-}
+.card-content { padding: 20px; }
 
 .card-content h3 {
     font-size: 27px;
@@ -241,59 +212,28 @@ header h1 {
     background-color: rgb(0, 238, 255);
     cursor: pointer;
 }
-
-/*specific cards*/
-#card2 p{
-    margin-top: 20px;
-}
-#card2 button{
-    margin-top: 40px;
-}
-#card3 p{
-    margin-top: 20px;
-}
-#card3 button{
-    margin-top: 40px;
-}
-#card4 p{
-    margin-top: 20px;
-}
-#card4 button{
-    margin-top: 40px;
-}
-#card5 p{
-    margin-top: 20px;
-}
-#card5 button{
-    margin-top: 40px;
-}
-
-
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    font-size: 27px;
-    margin-bottom: 8px;
-}
-
-.card-content p {
+.card-button:hover {
     color: whitesmoke;
-    font-size: 15px;
-    line-height: 1.7;
+    background-color: rgba(0, 238, 255, 0.466);
 }
 
-.card-button {
-    display: inline-block;
-    padding: 6px 16px;
-    margin-top: 16px;
-    border: none;
-    border-radius: 20px 0px 20px 0px;
-    color: black; 
-    background-color: rgb(0, 238, 255);
-    cursor: pointer;
-}
+/*image section homepage*/
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .image-section img {
+    width: 450px;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 238, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+
 /*Footer section*/
 footer {
     position: static;
@@ -312,4 +252,97 @@ footer a {
     pointer-events: none;
 }
 
+/*Contact Page*/
+.contact-page {
+    min-height: 50vh;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    color: rgb(0, 238, 255);
+    font-size: 36px;
+    margin-bottom: 1px
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .contact-wrapper > * {
+    flex: 1 1 300px; /* each child: grow (1), shrink (1), minimum width 300px */
+  }
+  
+
+.contact-form { text-align: left; }
+
+.contact-form {
+    font-size: 20px;
+    margin-bottom: 20px;
+    background: none;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { background: none; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.192);
+    color: whitesmoke;
+}
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgb(0, 238, 255);
+    color: rgb(255, 255, 255);
+}
+
+form button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+form button:hover {
+    color: whitesmoke;
+    background-color: rgba(0, 238, 255, 0.466);
+}
+
+.contact-info { text-align: left; }
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form i {
+    color: white;
+}
+
+.contact-footer { position: fixed; }
 
