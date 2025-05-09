@@ -108,7 +108,7 @@ header h1 {
     justify-content: space-around;
 }
 
-/*Text section*/
+/*hero - Text section*/
 .hero-section h1 {
     font-size: 45px;
     width: 420px;
@@ -129,6 +129,10 @@ header h1 {
     background-color: rgba(255, 255, 255, 0);
 }
 
+.hero-section a {
+    background-color: rgba(255, 255, 255, 0);;
+}
+
 .hero-content {
     padding: 20px;
     margin-left: auto;
@@ -136,3 +140,203 @@ header h1 {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.048);
 }
+
+.cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(0, 238, 255);
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    color: whitesmoke;
+    background-color: rgba(0, 238, 255, 0.466);
+}
+
+/*Title*/
+.highlights h1 {
+    padding: 20px;
+    margin-bottom: -130px;
+    font-family: 'Antonio', 'Poppins', verdana, sans-serif;
+    font-size: 80px;
+    color: rgb(0, 238, 255);
+    text-align: center;
+}
+
+/*Info Card */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: 5px;
+}
+.card {
+    width: 325px;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid rgb(0, 238, 255);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/*specific cards*/
+#card2 p{
+    margin-top: 20px;
+}
+#card2 button{
+    margin-top: 40px;
+}
+#card3 p{
+    margin-top: 20px;
+}
+#card3 button{
+    margin-top: 40px;
+}
+#card4 p{
+    margin-top: 20px;
+}
+#card4 button{
+    margin-top: 40px;
+}
+#card5 p{
+    margin-top: 20px;
+}
+#card5 button{
+    margin-top: 40px;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 6px 16px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+}
+
+/*Gallery Section*/
+
+.gallery {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.gallery img {
+    width: 130px;
+    height: 125px;
+    border: 1px solid rgba(0, 238, 255, 0.26);
+    border-radius: 8px;
+    box-shadow: 4px 7px 7px 0px rgba(255, 255, 255, 0.13);
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+    filter: sepia(1) saturate(1.9) hue-rotate(150deg);
+}
+.gallery img:hover {
+    filter: saturate(1.15);
+    width: 390px;
+    height: 260px;
+}
+
+/*specific cards*/
+#card2 p{
+    margin-top: 20px;
+}
+#card2 button{
+    margin-top: 40px;
+}
+#card3 p{
+    margin-top: 20px;
+}
+#card3 button{
+    margin-top: 40px;
+}
+#card4 p{
+    margin-top: 20px;
+}
+#card4 button{
+    margin-top: 40px;
+}
+#card5 p{
+    margin-top: 20px;
+}
+#card5 button{
+    margin-top: 40px;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 6px 16px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+}
+/*Footer section*/
+footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    font-size: 12px;
+    background-color: black;
+    text-align: center;
+}
+
+footer a {
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
