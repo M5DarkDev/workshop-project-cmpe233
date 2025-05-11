@@ -4,8 +4,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', verdana, sans-serif;
+    font-size: 1em;
     color: whitesmoke;
     background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 225, 255);
 }
 
 /*links, lists and button reset*/
@@ -17,7 +22,9 @@ li, a, button {
     text-decoration: none;
 }
 
-/*header section*/
+/*============================== 
+==============HEADER============
+==============================*/
 header {
     display: flex;
     justify-content: flex-end;
@@ -36,23 +43,27 @@ header h1 {
     color: rgb(0, 238, 255);
 }
 
-/*Navegation Bar*/
-.nav_links { list-style: none; }
+/*Navegation Bar for all pages*/
+.nav_links { 
+    list-style: none; 
+}
 
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
 }
 
-.nav_links li a { transition: all 0.3s ease 0s; }
+.nav_links li a { 
+    transition: all 0.3s ease 0s;
+}
 
 .nav_links li a:hover { 
     color:rgb(0, 238, 255);
     border-bottom: 2px solid rgb(0, 238, 255); 
 }
 
-/*contact button*/
-.contact {
+/*Contact button*/
+.cta-btn {
     margin-left: 20px;
     padding: 9px 25px;
     border: none;
@@ -63,24 +74,12 @@ header h1 {
     transition: all 0.3s ease 0s;
 }
 
-.contact:hover {
+.cta-btn:hover {
     color: whitesmoke;
     background-color: rgba(0, 238, 255, 0.466);
 }
 
-/*Contact button on the contact page*/
-.contact-activate {
-    margin-left: 20px;
-    padding: 9px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor: default;
-    color: black;
-    background-color: rgb(0, 238, 255);
-    transition: all 0.3s ease 0s;
-}
-
-/*Activate link on navegation bar*/
+/*Active page on navegation bar*/
 .active {
     margin-left: 20px;
     padding: 4px 20px;
@@ -92,25 +91,30 @@ header h1 {
     transition: all 0.3s ease 0s;
 } 
 
+/*============================== 
+==============HOME==============
+==============================*/
+
 /*Hero section*/
 .hero-section {
     width: 100%;
     height: 100vh;
-    background-image: url(banner.png); /* Imagem original para desktop */
+    padding: 0px 100px;
+    background-image: url(/img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0px 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-/*hero - Text section*/
+/*Hero - Text section*/
 .hero-section h1 {
-    font-size: 45px;
     width: 420px;
+    color: whitesmoke;
     font-family: 'Antonio', verdana, sans-serif;
     font-weight: 400px;
+    font-size: 45px;
 }
 
 .hero-section p {
@@ -121,7 +125,9 @@ header h1 {
     font-size: 18px;
 }
 
-.hero-section h1, p, b, a { background-color: rgba(255, 255, 255, 0); }
+.hero-section h1, p, b, a {
+    background-color: rgba(255, 255, 255, 0); 
+}
 
 .hero-content {
     padding: 20px;
@@ -131,78 +137,7 @@ header h1 {
     background-color: rgba(255, 255, 255, 0.048);
 }
 
-.cta {
-    margin-left: 20px;
-    padding: 9px 25px;
-    border: none;
-    border-radius: 20px 0px 20px 0px;
-    cursor: pointer;
-    color: black;
-    background-color: rgb(0, 238, 255);
-    transition: all 0.3s ease 0s;
-}
-
-.cta:hover {
-    color: whitesmoke;
-    background-color: rgba(0, 238, 255, 0.466);
-}
-
-/*Title*/
-.highlights h1 {
-    padding: 20px;
-    margin-bottom: -130px;
-    font-family: 'Antonio', 'Poppins', verdana, sans-serif;
-    font-size: 80px;
-    color: rgb(0, 238, 255);
-    text-align: center;
-}
-
-/*Info Card */
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    margin-left: 5px;
-}
-.card {
-    width: 325px;
-    margin: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: left;
-    border: 1px solid rgb(0, 238, 255);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-/*specific cards*/
-#card2 p { margin-top: 20px; }
-#card2 button { margin-top: 40px; }
-#card3 p { margin-top: 20px; }
-#card3 button { margin-top: 40px;}
-#card4 p { margin-top: 20px;}
-#card4 button { margin-top: 40px;}
-#card5 p { margin-top: 20px; }
-#card5 button { margin-top: 40px; }
-
-.card-content { padding: 20px; }
-
-.card-content h3 {
-    font-size: 27px;
-    margin-bottom: 8px;
-}
-
-.card-content p {
-    color: whitesmoke;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.card-button {
+.btn {
     display: inline-block;
     padding: 6px 16px;
     margin-top: 16px;
@@ -212,240 +147,156 @@ header h1 {
     background-color: rgb(0, 238, 255);
     cursor: pointer;
 }
-.card-button:hover {
+.btn:hover {
     color: whitesmoke;
     background-color: rgba(0, 238, 255, 0.466);
-}
-
-/*image section homepage*/
-.image-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .image-section img {
-    width: 450px;
-    height: 250px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 238, 255, 0.2);
-    transition: transform 0.3s ease;
-  }
-
-/*Footer section*/
-footer {
-    position: static;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    font-size: 12px;
-    background-color: black;
-    text-align: center;
-}
-
-footer a {
-    font-size: 14px;
-    font-weight: bold;
-    pointer-events: none;
-}
-
-/*Contact Page*/
-.contact-page {
-    min-height: 50vh;
-    padding: 50px;
-    text-align: center;
-}
-
-.contact-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-container h2 {
-    color: rgb(0, 238, 255);
-    font-size: 36px;
-    margin-bottom: 1px
-}
-
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .contact-wrapper > * {
-    flex: 1 1 300px; /* each child: grow (1), shrink (1), minimum width 300px */
-  }
-  
-
-.contact-form { text-align: left; }
-
-.contact-form {
-    font-size: 20px;
-    margin-bottom: 20px;
-    background: none;
-}
-
-.form-group { margin-bottom: 20px; }
-.form-group label { background: none; }
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.192);
-    color: whitesmoke;
-}
-textarea {
-    height: 150px;
-    resize: none;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    box-shadow: 0px 0px 8px rgb(0, 238, 255);
-    color: rgb(255, 255, 255);
-}
-
-form button {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-top: 16px;
-    border: none;
-    border-radius: 20px 0px 20px 0px;
-    color: black; 
-    background-color: rgb(0, 238, 255);
-    cursor: pointer;
     transition: all 0.4s ease 0s;
 }
 
-form button:hover {
-    color: whitesmoke;
-    background-color: rgba(0, 238, 255, 0.466);
-}
+/*============================== 
+============DETAILS=============
+==============================*/
 
-.contact-info { text-align: left; }
-
-.contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-.contact-form i {
-    color: white;
-}
-
-.contact-footer { position: fixed; }
-
-/*Mobile Styles*/
-@media (max-width: 768px) {
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
-  }
-
-  .nav_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+/*Hero section of Details page*/
+.hero-section-details {
     width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav_links li {
-    display: inline-block;
-    padding: 5px 10px;
-  }
-
-  .contact,
-  .contact-activate,
-  .active {
-    margin: 10px 5px 0;
-    padding: 8px 16px;
-    font-size: 14px;
-    width: auto;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
-    background-image: url('/img/banner-mobile.png');
-    background-position: left center;
+    height: 100vh;
+    padding: 0px 100px;
+    background-image: url(/img/banner2.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
-  }
-
-  .hero-content {
-    margin-left: 0;
-    padding: 20px;
-    width: 100%;
-  }
-
-  .hero-section h1,
-  .hero-section p {
-    width: 100%;
-  }
-
-  .highlights h1 {
-    font-size: 50px;
-    margin-bottom: 0;
-  }
-
-  .card-container {
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    margin: 40px 0;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .image-section img {
-    width: 90%;
-    height: auto;
-  }
-
-  .contact-page {
-    padding: 20px;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  input,
-  textarea {
-    font-size: 16px;
-  }
-
-  form button {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 10px;
-    padding: 10px;
-  }
-
-  footer a {
-    font-size: 12px;
-  }
+    justify-content: space-around;
 }
 
+.hero-section-details h1 {
+    width: 820px;
+    color: whitesmoke;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-weight: 400px;
+    font-size: 60px;
+}
+
+.hero-section-details p {
+    width: 820px;
+    padding: 30px 0px;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.hero-section-details h1, p, b, a {
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+.hero-content-details {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.048);
+}
+
+/*Media Queries for mobile responsiveness*/
+
+@media screen and (max-width: 768px) {
+    /* Adjust header padding */
+    header {
+        padding: 20px 5%;
+    }
+
+    /* Hero section changes */
+    .hero-section {
+        padding: 0px 20px;
+        background-image: url(/img/hero-mobile.png); /* Replace with mobile image */
+        background-size: cover;
+    }
+
+    /* Hero section text size adjustment */
+    .hero-section h1 {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Adjust card container layout */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust card width */
+    .card {
+        width: 90%;
+    }
+
+    /* Adjust image section layout */
+    .image-section {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact page adjustments */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .contact-btn-active, .cta-btn {
+        width: 100%;
+    }
+}
+
+/*Further adjustments for smaller screens, e.g., phones */
+@media screen and (max-width: 480px) {
+    /* Further text adjustments for smaller screens */
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-section-details h1 {
+        font-size: 50px;
+    }
+
+    .hero-section-details p {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .register a h3 {
+        font-size: 18px;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        font-size: 18px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+}
