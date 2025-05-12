@@ -184,14 +184,6 @@ header h1 {
     height: auto;
 }
 
-/*Specific attributes for card 2,3,4,5*/
-#card-x p{ 
-    margin-top: 20px; 
-}
-#card-x button{ 
-    margin-top: 40px; 
-}
-
 .card-content { 
     padding: 20px;
 }
@@ -652,11 +644,6 @@ input[type="checkbox"] {
     margin-right: 20px;
     border-radius: 8px;
     font-size: 20px;
-}
-
-.input-group button {
-    margin-top: -45px;
-    border-radius: 10px 0px 10px 0px ;
 }
 
 .selection-title {
