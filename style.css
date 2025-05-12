@@ -1,0 +1,302 @@
+/*Global reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-size: 1em;
+    color: whitesmoke;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 225, 255);
+}
+
+/*links, lists and button reset*/
+li, a, button {
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 500px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+/*============================== 
+==============HEADER============
+==============================*/
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/*header logo*/
+header h1 {
+    margin-right: auto;
+    padding: 0;
+    cursor: default;
+    text-transform: uppercase;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-size: 25px;
+    color: rgb(0, 238, 255);
+}
+
+/*Navegation Bar for all pages*/
+.nav_links { 
+    list-style: none; 
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a { 
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover { 
+    color:rgb(0, 238, 255);
+    border-bottom: 2px solid rgb(0, 238, 255); 
+}
+
+/*Contact button*/
+.cta-btn {
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(0, 238, 255);
+    transition: all 0.3s ease 0s;
+}
+
+.cta-btn:hover {
+    color: whitesmoke;
+    background-color: rgba(0, 238, 255, 0.466);
+}
+
+/*Active page on navegation bar*/
+.active {
+    margin-left: 20px;
+    padding: 4px 20px;
+    border: none;
+    border-radius: 50px;
+    pointer-events: none; /*no click*/
+    color: black;
+    background-color: rgb(0, 238, 255);
+    transition: all 0.3s ease 0s;
+} 
+
+/*============================== 
+==============HOME==============
+==============================*/
+
+/*Hero section*/
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 100px;
+    background-image: url(/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Hero - Text section*/
+.hero-section h1 {
+    width: 420px;
+    color: whitesmoke;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-weight: 400px;
+    font-size: 45px;
+}
+
+.hero-section p {
+    width: 430px;
+    padding: 30px 0px;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.hero-section h1, p, b, a {
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+.hero-content {
+    padding: 20px;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.048);
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 16px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+}
+.btn:hover {
+    color: whitesmoke;
+    background-color: rgba(0, 238, 255, 0.466);
+    transition: all 0.4s ease 0s;
+}
+
+/*============================== 
+============DETAILS=============
+==============================*/
+
+/*Hero section of Details page*/
+.hero-section-details {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 100px;
+    background-image: url(/img/banner2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-section-details h1 {
+    width: 820px;
+    color: whitesmoke;
+    font-family: 'Antonio', verdana, sans-serif;
+    font-weight: 400px;
+    font-size: 60px;
+}
+
+.hero-section-details p {
+    width: 820px;
+    padding: 30px 0px;
+    font-family: 'Poppins', verdana, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.hero-section-details h1, p, b, a {
+    background-color: rgba(255, 255, 255, 0); 
+}
+
+.hero-content-details {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.048);
+}
+
+/*Media Queries for mobile responsiveness*/
+
+@media screen and (max-width: 768px) {
+    /* Adjust header padding */
+    header {
+        padding: 20px 5%;
+    }
+
+    /* Hero section changes */
+    .hero-section {
+        padding: 0px 20px;
+        background-image: url(/img/hero-mobile.png); /* Replace with mobile image */
+        background-size: cover;
+    }
+
+    /* Hero section text size adjustment */
+    .hero-section h1 {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Adjust card container layout */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust card width */
+    .card {
+        width: 90%;
+    }
+
+    /* Adjust image section layout */
+    .image-section {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact page adjustments */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .contact-btn-active, .cta-btn {
+        width: 100%;
+    }
+}
+
+/*Further adjustments for smaller screens, e.g., phones */
+@media screen and (max-width: 480px) {
+    /* Further text adjustments for smaller screens */
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-section-details h1 {
+        font-size: 50px;
+    }
+
+    .hero-section-details p {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .register a h3 {
+        font-size: 18px;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        font-size: 18px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+}
