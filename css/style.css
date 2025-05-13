@@ -4,13 +4,18 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', verdana, sans-serif;
-    font-size: 1em;
+    font-size: 16;
     color: whitesmoke;
     background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: rgb(0, 225, 255);
+    background: none;
+}
+
+p, ul, li, b, a {
+    background:none; 
 }
 
 /*links, lists and button reset*/
@@ -36,14 +41,14 @@ header {
 header h1 {
     margin-right: auto;
     padding: 0;
-    cursor: default;
     text-transform: uppercase;
     font-family: 'Antonio', verdana, sans-serif;
     font-size: 25px;
     color: rgb(0, 238, 255);
+    cursor: none;
 }
 
-/*Navegation Bar for all pages*/
+/*Navegation Bar*/
 .nav_links { 
     list-style: none; 
 }
@@ -53,59 +58,54 @@ header h1 {
     padding: 0px 20px;
 }
 
-.nav_links li a { 
-    transition: all 0.3s ease 0s;
-}
-
 .nav_links li a:hover { 
     color:rgb(0, 238, 255);
-    border-bottom: 2px solid rgb(0, 238, 255); 
+    border-bottom: 2px solid rgb(0, 238, 255);
 }
 
 /*Contact button*/
 .cta-btn {
     margin-left: 20px;
-    padding: 9px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 50px;
-    cursor: pointer;
     color: black;
     background-color: rgb(0, 238, 255);
-    transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
 .cta-btn:hover {
     color: whitesmoke;
     background-color: rgba(0, 238, 255, 0.466);
+    transition: all 0.3s ease 0s;
 }
 
-/*Active page on navegation bar*/
+/*Active page effect on navegation bar*/
 .active {
-    margin-left: 20px;
-    padding: 4px 20px;
-    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px 20px;
+    border: 1px solid rgb(0, 225, 255);
     border-radius: 50px;
+    color: rgb(0, 238, 255);
+    background-color: rgb(0, 0, 0);
     pointer-events: none; /*no click*/
-    color: black;
-    background-color: rgb(0, 238, 255);
-    transition: all 0.3s ease 0s;
 } 
 
 /*============================== 
 ==============HOME==============
 ==============================*/
-
 /*Hero section*/
 .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     height: 100vh;
     padding: 0px 100px;
     background-image: url(/img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 /*Hero - Text section*/
@@ -114,19 +114,13 @@ header h1 {
     color: whitesmoke;
     font-family: 'Antonio', verdana, sans-serif;
     font-weight: 400px;
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .hero-section p {
     width: 430px;
     padding: 30px 0px;
-    font-family: 'Poppins', verdana, sans-serif;
-    font-weight: 400;
     font-size: 18px;
-}
-
-.hero-section h1, p, b, a {
-    background-color: rgba(255, 255, 255, 0); 
 }
 
 .hero-content {
@@ -134,7 +128,7 @@ header h1 {
     margin-left: auto;
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.048);
+    background-color: rgba(255, 255, 255, 0.068);
 }
 
 .btn {
@@ -142,7 +136,7 @@ header h1 {
     padding: 6px 16px;
     margin-top: 16px;
     border: none;
-    border-radius: 20px 0px 20px 0px;
+    border-radius: 15px 0px 15px 0px;
     color: black; 
     background-color: rgb(0, 238, 255);
     cursor: pointer;
@@ -156,7 +150,7 @@ header h1 {
 /*Info Section*/
 .highlights h1 {
     padding: 20px;
-    margin-bottom: -130px;
+    margin-bottom: -30px;
     font-family: 'Antonio', 'Poppins', verdana, sans-serif;
     font-size: 80px;
     text-align: center;
@@ -167,11 +161,10 @@ header h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
-    margin-left: 5px;
 }
+
 .card {
-    width: 325px;
+    width: 330px;
     margin: 20px;
     border-radius: 8px;
     border: 1px solid rgb(0, 238, 255);
@@ -189,8 +182,17 @@ header h1 {
 }
 
 .card-content h3 {
-    margin-bottom: 8px;
-    font-size: 27px;
+    font-size: 20px;
+}
+
+.card-content p {
+    margin: 0 auto;
+    margin-bottom: -10px;
+    font-size: 18px;
+}
+
+#card-x p {
+    margin-top: 20px;
 }
 
 /*Image section homepage*/
@@ -206,7 +208,6 @@ header h1 {
     width: 450px;
     height: 250px;
     border-radius: 8px;
-    transition: transform 0.3s ease;
 }
 
 /*============================== 
@@ -215,35 +216,28 @@ header h1 {
 
 /*Hero section of Details page*/
 .hero-section-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     height: 100vh;
     padding: 0px 100px;
     background-image: url(/img/banner2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .hero-section-details h1 {
-    width: 820px;
+    width: 800px;
     color: whitesmoke;
     font-family: 'Antonio', verdana, sans-serif;
-    font-weight: 400px;
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .hero-section-details p {
-    width: 820px;
-    padding: 30px 0px;
-    font-family: 'Poppins', verdana, sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-}
-
-.hero-section-details h1, p, b, a {
-    background-color: rgba(255, 255, 255, 0); 
+    width: 800px;
+    padding: 30px;
+    font-size: 32px;
 }
 
 .hero-content-details {
@@ -251,45 +245,37 @@ header h1 {
     margin: auto;
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.048);
+    background-color: rgba(255, 255, 255, 0.068);
 }
 
 /*Infor area*/
-.info {
+.learn {
+    margin-bottom: -50px;
     padding: 30px;
     font-size: 1.1em;
 }
 
-.info h3 {
+.learn h3 {
     font-size: 30px;
 }
 
-.info a {
+.learn a {
     font-size: 20px;
     text-decoration: underline;
-}
-
-.info li {
-    font-size: 20px;
 }
 
 /* Coach Section */
 .instructors-section {
     padding: 40px 20px;
-    color: white;
-    background-color: black;
     text-align: center;
 }
 
 .instructors-section h2 {
-    margin-bottom: 10px;
     font-size: 30px;
-    background: none;
 }
 
 .instructors-section p {
-    margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .instructor-cards {
@@ -300,70 +286,69 @@ header h1 {
 }
 
 .instructor-card {
-    border: 1px solid rgb(0, 238, 255);
-    padding: 15px;
-    border-radius: 8px;
     width: 250px;
+    padding: 5px;
+    border: 1px solid rgb(0, 238, 255);
+    border-radius: 8px;
 }
 
 .instructor-card img {
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .instructor-card h3 {
     margin-bottom: 5px;
     font-size: 25px;
-    color: rgb(0, 174, 255) ;
-    background: none;
+    color: rgb(0, 174, 255);
 }
 
 .instructor-card p {
-    font-size: 14px;
+    font-size: 16px;
+}
+
+#i-card-x h3 {
+    margin-top: 5.5px;
+    margin-bottom: 2.5px;
 }
 
 /* Schedule Section */
 .schedule-section {
     max-width: 1000px;
-    padding: 50px 20px;
     margin: 0 auto;
-    color: white;
+    padding: 50px 20px;
     border: 1px solid rgb(0, 238, 255);
     border-radius: 8px;
 }
 
 .schedule-section h2 {
-    margin-bottom: 30px;
     text-transform: uppercase;
-    background: none;
     font-size: 28px;   
     text-align: center;
 }
 
-.schedule-section p {  
-    margin-bottom: 40px;
+.schedule-section p {
     text-align: center;
-    color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .day-block {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ffffff0e;
+    background-color: #111;
+}
+
+.schedule-section .day-block p {
+    text-align: justify;
 }
 
 .day-block h3 {
     font-size: 22px;
     color: rgb(0, 174, 255);
-    margin-bottom: 15px;
 }
 
 .day-block h4 {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 20px;
 }
 
 .day-block ul {
@@ -376,117 +361,81 @@ header h1 {
     line-height: 1.5;
 }
 
-.day-block p {
-    margin-top: 15px;
-    font-weight: 400; 
-}
-
-.day-block h3, h4, ul, li,  p {
-    background: none;
-}
-
 /*Workshop Moments*/
-.workshop-media {
+.workshop-moments {
     padding: 40px 20px;
     text-align: center;
 }
 
-.workshop-media h2 {
-    margin-bottom: 20px;
+.workshop-moments h2 {
     font-size: 30px;
 }
 
-.photo-row img {
-    width: 400px;
-    margin: 10px;
-    border-radius: 4px;
-}
-
-.video-row video {
+.pictures img, video {
     width: 500px;
     margin: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /*testimonials*/
-.testimonials {
-    background-color: black;
-    color: white;
+.comment {
     padding: 40px 20px;
     text-align: center;
 }
 
-.testimonials h3 {
+.comment h3 {
+    margin-top: -50px;
     margin-bottom: 20px;
     font-size: 30px;
 }
 
-.testimonial {
-    padding: 15px;
-    margin-bottom: 15px;
+.comments {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 6px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
     background-color: #111;
-}
-  
-.testimonial p {
-    font-size: 14px;
-    color: #cccccc;
 }
 
 /*Faq section*/
 .faq {
+    max-width: 700px;
     margin: 0 auto;
     margin-top: -50px;
     padding: 40px 20px;
-    max-width: 700px;
-    color: white;
 }
 
 .faq h3 {
+    margin-bottom: 30px;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.faq-item {
-    background-color: #111;
-    padding: 15px;
-    border-radius: 6px;
+.faq-card {
+    padding: 10px;
     margin-bottom: 15px;
-}
-
-.faq-item p {
-    margin: 0;
-    font-size: 16px;
-    color: #ccc;
+    border-radius: 8px;
+    background-color: #111;
 }
 
 /*Certificate Section*/
 .certf {    
     margin-top: -50px;
     padding: 40px 20px;
-    background-color: black;
-    color: white;
     text-align: center;
 }
 
 .certf h3 {
-    margin-bottom: 15px;
     font-size: 30px;
 }
 
 .certf ul {
-    margin-top: 10px;    
-    padding: 0;
+    margin-top: 10px;
     list-style-type: none;
 }
 
 .certf ul li {
     margin-bottom: 10px;
-    color: #ccc;
 }
 
 /*Price Table*/
@@ -495,24 +444,21 @@ header h1 {
     font-size: 30px;
 }
 .pricing-table {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  color: white;
-  background-color: #111;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
 }
 
-.pricing-table th,
-.pricing-table td {
-  padding: 12px;
-  border: 1px solid #444;
-  text-align: center;
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: center;
 }
 
 .pricing-table th {
-  background-color: #22222286;
-  color: rgb(0, 225, 255);
+    background-color: #22222286;
+    color: rgb(0, 225, 255);
 }
 
 /*Register Button*/
@@ -664,15 +610,14 @@ input[type="checkbox"] {
 ==============================*/
 
 /*Contact button on the contact page*/
-.contact-btn-active {
+.cta-btn-active {
     margin-left: 20px;
-    padding: 9px 25px;
-    border: none;
+    padding: 10px 25px;
+    border: 1px solid rgb(0, 225, 255);
     border-radius: 50px;
+    color: rgb(0, 238, 255);
+    background-color: rgb(0, 0, 0);
     cursor: default;
-    color: black;
-    background-color: rgb(0, 238, 255);
-    transition: all 0.3s ease 0s;
 }
 
 .contact-page {
@@ -687,8 +632,8 @@ input[type="checkbox"] {
 }
 
 .contact-container h2 {
-    font-size: 36px;
-    margin-bottom: 1px
+    margin-bottom: 1px;
+    font-size: 30px;
 }
 
 .contact-wrapper {
@@ -706,27 +651,21 @@ input[type="checkbox"] {
 }
 
 .contact-form {
-    font-size: 20px;
     margin-bottom: 20px;
-    background: none;
+    font-size: 20px;
 }
 
 .form-group { 
     margin-bottom: 20px; 
 }
 
-.form-group label { 
-    background: none; 
-}
-
 input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border-radius: 8px;
     border: none;
     font-size: 14px;
     background-color: rgba(255, 255, 255, 0.192);
-    color: whitesmoke;
 }
 
 textarea {
@@ -743,19 +682,19 @@ textarea:focus {
 
 form button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 10px 20px;
     margin-top: 16px;
     border: none;
-    border-radius: 20px 0px 20px 0px;
+    border-radius: 10px 0px 10px 0px;
     color: black; 
     background-color: rgb(0, 238, 255);
     cursor: pointer;
-    transition: all 0.4s ease 0s;
 }
 
 form button:hover {
     color: whitesmoke;
     background-color: rgba(0, 238, 255, 0.466);
+    transition: all 0.4s ease 0s;
 }
 
 .contact-info { 
@@ -764,21 +703,12 @@ form button:hover {
 
 .contact-info h3 {
     font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
     margin-bottom: 10px;
 }
 
-.contact-form i {
-    color: white;
-}
-
 .contact-footer { 
-    position: fixed; 
+    position: fixed
 }
-
 
 /*=============================
 =============FOOTER============
