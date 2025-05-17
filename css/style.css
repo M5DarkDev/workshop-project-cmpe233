@@ -377,7 +377,7 @@ header h1 {
     border-radius: 8px;
 }
 
-/*testimonials*/
+/*Comments Section*/
 .comment {
     padding: 40px 20px;
     text-align: center;
@@ -477,132 +477,226 @@ header h1 {
 /*============================== 
 ==========REGISTRATION==========
 ==============================*/
-.main {
-    padding: 30px;
-}
 
+/*Main Table*/
 .pricing-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0px 20px;
     border: 1px solid rgb(0, 225, 255);
     border-radius: 8px;
 }
 
 .pricing-section h2 {
-    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 35px;
     text-align: center;
 }
 
-.selection-group {
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #22222286;
+.pricing-section table {
+    width: 100%;
+    border-collapse: collapse;
     border-radius: 8px;
+    overflow: hidden;
 }
 
-.selection-title h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: whitesmoke;
-    background-color: #22222286;
-}
-
-.session-options {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.session-option label {
-    display: inline-block;
-    align-items: center;
-    padding: 20px;
-    border: 2px solid rgb(0, 225, 255);
+.pricing-section th, .pricing-section td {
+    padding: 15px;
+    border: 1px solid #ffffff;
     border-radius: 8px;
+    text-align: left;
     font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.session-option input:checked+label {
-    font-size: 18px;
-    color: #111;
-    background-color: rgb(0, 225, 255);
+.pricing-section th {
+    background-color: #222222;
+    font-weight: bold;
 }
 
-.addon-options {
-    display: inline;
+/*Participant radios section */
+.participant-options {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 16px;
-
 }
 
-.addon-option label {
+.participant-options .option {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px;
-    font-size: 18px;
+}
+
+.participant-options input[type="radio"] {
+    margin-right: 8px;
+    width: 14px;
+}
+
+/* Session Checkbox */
+.session-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.session-option input[type="checkbox"] {
+    margin-right: 8px;
+    width: 14px;
+}
+
+ .participant-options label, .session-option label {
     cursor: pointer;
 }
 
-.addon-option label:hover {
-    font-weight: bold;
-    transition: all 0.3s ease 0s;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-}
-
-.calculator-section {
-    margin-top: 10px;
-    padding: 1.5rem;
-    background-color: #111;
+/* Date input */
+td input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ffffff;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    display: block;
+    font-size: 16px;
+    cursor: pin;
 }
 
-.calculator-section h2, p {
+/* Individual cost inputs */
+.item-cost {
+    width: 100%;
     padding: 10px;
-    background: none;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.192);
+    text-align: center;
+    cursor: default;
 }
 
-.calculator-section p {
-    margin-bottom: 10px;
-    font-size: 18px;
+/* Total Cost Row */
+.total-cost-label {
+    font-weight: bold;
+}
+
+.total-cost-value input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 225, 255, 0.247);
+    text-align: center;
+    cursor: default;
+}
+
+
+/* Calculator Section*/
+.calculator-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 8px;
+}
+
+.calc-details{
+    border: 1px solid rgb(0, 225, 255);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+
+#calculationDetails p {
+    text-align: left;
+    font-size: 20px;
 }
 
 .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
     background: none;
 }
 
-.input-group input {
-    width: 80px;
-    height: 40px;
+.calculator-section h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.calculator-section p {
+    text-align: center;
+}
+
+.input-group label {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 225, 255);
+    background-color: #222222;
+}
+
+.input-group input[type="number"] {
+    width: 100px;
     padding: 10px;
-    margin-right: 20px;
     border-radius: 8px;
-    font-size: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.192);
+    cursor: default;
 }
 
-.selection-title {
-    font-size: 30px;
+.input-group button {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 10px 0px 10px 0px;
+    font-weight: 700;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
 }
 
-#result {
-    padding: 10px;
-    margin-top: 20px;
+.input-group button:hover {
     border: 1px solid rgb(0, 225, 255);
-    border-radius: 8px;
+    color: rgb(0, 225, 255);
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: all 0.4s ease 0s;
+}
+
+#calculationDetails {
+    margin-top: 1rem;
+    color: green;
+    font-size: 25px;
+}
+
+/* Payment Button*/
+.payment-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-send {
+    width: 250px;
+    height: auto;
+    padding: 6px 16px;
+    border: none;
     font-size: 20px;
-    background: none;
+    font-weight: 700;
+    border-radius: 10px 0px 10px 0px;
+    color: black; 
+    background-color: rgb(0, 238, 255);
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    border: 1px solid rgb(0, 225, 255);
+    color: rgb(0, 225, 255);
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: all 0.4s ease 0s;
 }
 
 /*=============================
