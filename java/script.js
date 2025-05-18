@@ -93,6 +93,15 @@ function calculatePrice() {
     calculationDetailsElement.innerHTML = detailsHTML;
 }
 
+function confirmation() {
+    let userConfirmation = confirm("Are you accepting the calculation?");
+    if (userConfirmation) {
+        alert("Thanks for the purchase!");
+    } else {
+        alert("The payment was declined!");
+    }
+}
+
 // Initial calculation on page load (to show default values)
 document.addEventListener('DOMContentLoaded', () => {
     
