@@ -21,7 +21,7 @@ p, ul, li, b, a {
 /*links, lists and button reset*/
 li, a, button {
     font-family: 'Poppins', verdana, sans-serif;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
     color: white;
     text-decoration: none;
@@ -111,11 +111,16 @@ header h1 {
     width: 420px;
     color: whitesmoke;
     font-family: 'Antonio', verdana, sans-serif;
-    font-weight: bold;
     font-size: 50px;
 }
 
 .hero-section p {
+    width: 430px;
+    padding: 30px 0px;
+    font-size: 18px;
+}
+
+.hero-section b {
     width: 430px;
     padding: 30px 0px;
     font-size: 18px;
@@ -232,6 +237,12 @@ header h1 {
 }
 
 .hero-section-details p {
+    width: 800px;
+    padding: 30px;
+    font-size: 32px;
+}
+
+.hero-section-details b {
     width: 800px;
     padding: 30px;
     font-size: 32px;
@@ -799,7 +810,6 @@ footer {
     height: auto;
     padding: 20px;
     font-size: 12px;
-    background-color: black;
     text-align: center;
 }
 

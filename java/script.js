@@ -1,51 +1,50 @@
 function calculatePrice() {
-    // Define base prices per day
+    // Daily prices based on participant type
     const presenterDailyRate = 100;
     const audienceDailyRate = 75;
 
-    // Get participant type
-    // Use optional chaining (?.) and nullish coalescing (??) for safer access
+    // Get participant type (default to 'audience' if none selected)
     const participantTypeElement = document.querySelector('input[name="participantType"]:checked');
-    const participantType = participantTypeElement ? participantTypeElement.value : 'audience'; // Default to audience if none checked
+    const participantType = participantTypeElement ? participantTypeElement.value : 'audience';
     const dailyBasePrice = participantType === 'presenter' ? presenterDailyRate : audienceDailyRate;
 
-    // Get selected sessions (checkboxes)
+    // Get all selected sessions (checkboxes that are checked)
     const selectedSessions = document.querySelectorAll('input[type="checkbox"]:checked');
     const numSelectedSessions = selectedSessions.length;
 
-    // Get and validate dates
+    // Get the start and end dates
     const fromDateInput = document.getElementById('fromDate');
     const toDateInput = document.getElementById('toDate');
     const fromDate = new Date(fromDateInput.value);
     const toDate = new Date(toDateInput.value);
 
-    // Improved date validation: Check if inputs have values AND if parsed dates are valid
+    // Check if dates are filled in and make sense
     if (!fromDateInput.value || !toDateInput.value || isNaN(fromDate.getTime()) || isNaN(toDate.getTime()) || fromDate > toDate) {
-        // Clear previously displayed costs and details if dates are invalid
+        // If dates are invalid, clear everything and stop
         document.querySelectorAll('.item-cost').forEach(input => input.value = '');
         document.getElementById('totalCost').value = '0 (€)';
         document.getElementById('calculationDetails').innerHTML = '';
-        return; // Stop the function if dates are invalid
+        return;
     }
 
-    // Calculate number of days between dates (inclusive)
+    // Calculate how many days total (including start and end)
     const timeDiff = toDate - fromDate;
     const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1;
 
-    // Calculate cost for each selected session
+    // Start total session cost at 0
     let totalSessionCost = 0;
-    const sessionBaseCostPerDay = dailyBasePrice; // Base cost per session is the daily rate
+    const sessionBaseCostPerDay = dailyBasePrice;
 
-    // Clear previous item costs
+    // Clear previous session costs
     document.querySelectorAll('.item-cost').forEach(input => input.value = '');
 
+    // Loop through each selected session and calculate its cost
     selectedSessions.forEach(sessionCheckbox => {
         const sessionId = sessionCheckbox.id;
-        // Assuming each session costs the daily rate multiplied by the number of days
         const sessionCost = days * sessionBaseCostPerDay;
         totalSessionCost += sessionCost;
 
-        // Display cost for this session
+        // Show session cost in the related input field
         const costInputId = 'cost-' + sessionId;
         const costInput = document.getElementById(costInputId);
         if (costInput) {
@@ -53,7 +52,7 @@ function calculatePrice() {
         }
     });
 
-    // Get participants for group discount
+    // Get number of participants
     const participantsInput = document.getElementById('participants');
     const participants = parseInt(participantsInput.value);
 
@@ -61,20 +60,20 @@ function calculatePrice() {
         alert('Please enter a valid number of participants.');
         document.getElementById('totalCost').value = '0 (€)';
         document.getElementById('calculationDetails').innerHTML = '';
-        return; // Stop the function if participants is invalid
+        return;
     }
 
-    // Calculate subtotal (total session cost multiplied by participants)
+    // Total before discount
     const subtotal = totalSessionCost * participants;
 
-    // Apply discount
+    // Apply 10% discount if group has 4 or more people
     let discount = participants >= 4 ? subtotal * 0.10 : 0;
     const total = subtotal - discount;
 
-    // Display total cost
+    // Show total in input field
     document.getElementById('totalCost').value = total.toFixed(2) + ' (€)';
 
-    // Display calculation details
+    // Show detailed breakdown of the calculation
     const calculationDetailsElement = document.getElementById('calculationDetails');
     let detailsHTML = `
         <p><b>Participant Type:</b> ${participantType.charAt(0).toUpperCase() + participantType.slice(1)} (€${dailyBasePrice}/day)</p>
@@ -102,8 +101,7 @@ function confirmation() {
     }
 }
 
-// Initial calculation on page load (to show default values)
+// Run the calculation when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    
-    calculatePrice(); // Perform initial calculation on page load
+    calculatePrice();
 });
